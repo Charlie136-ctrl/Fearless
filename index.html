@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fearless</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index-media-query.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index-media-query.css">
 </head>
 <body>
     <nav>
         <a href="/">Home</a>
-        <a href="#Media">Media</a>
-        <a href="About us">About us</a>
+        <a href="#media">Media</a>
+        <a href="#about">About us</a>
     </nav>
     <!-- Hero -->
     <section class="hero">
@@ -76,6 +76,7 @@
     </section>
     
     <!-- About us -->
+    <section id="about"></section>
     <section class="about">
         <h2>About us</h2>
         <p>At Fearless, we embody the courage to challenge the status quo and empower others to do the same. 
@@ -134,5 +135,20 @@
         </form>
     </section>
     </section>
+    <script>
+        // Disable right-click menu
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        });
+    
+        // Disable keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+          if (e.ctrlKey && e.shiftKey && e.keyCode === 73) { // Ctrl + Shift + I
+            e.preventDefault();
+          } else if (e.ctrlKey && e.keyCode === 85) { // Ctrl + U
+            e.preventDefault();
+          }
+        });
+      </script>
     </body>
-    </html>
+    </html>
